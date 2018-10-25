@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		166F9AAA258C1836365BBFBA /* Pods_Dark_Skies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C60AB0268A14C5AADECAD0 /* Pods_Dark_Skies.framework */; };
+		9EB78E96218236F700C0A45E /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78E95218236F700C0A45E /* APIKeys.swift */; };
 		9EFB41D92180FE820061F41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41D82180FE820061F41A /* AppDelegate.swift */; };
 		9EFB41DB2180FE820061F41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41DA2180FE820061F41A /* ViewController.swift */; };
 		9EFB41DE2180FE820061F41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB41DC2180FE820061F41A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		73C60AB0268A14C5AADECAD0 /* Pods_Dark_Skies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Skies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B00390E9CE5DFCC7B8879C6 /* Pods-Dark Skies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Skies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Skies/Pods-Dark Skies.debug.xcconfig"; sourceTree = "<group>"; };
+		9EB78E95218236F700C0A45E /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		9EFB41D52180FE820061F41A /* Dark Skies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Skies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFB41D82180FE820061F41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EFB41DA2180FE820061F41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				9EFB41DF2180FE840061F41A /* Assets.xcassets */,
 				9EFB41E12180FE840061F41A /* LaunchScreen.storyboard */,
 				9EFB41E42180FE840061F41A /* Info.plist */,
+				9EB78E95218236F700C0A45E /* APIKeys.swift */,
 			);
 			path = "Dark Skies";
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB78E96218236F700C0A45E /* APIKeys.swift in Sources */,
 				9EFB41DB2180FE820061F41A /* ViewController.swift in Sources */,
 				9EFB41D92180FE820061F41A /* AppDelegate.swift in Sources */,
 			);
