@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		166F9AAA258C1836365BBFBA /* Pods_Dark_Skies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C60AB0268A14C5AADECAD0 /* Pods_Dark_Skies.framework */; };
 		9EB78E96218236F700C0A45E /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78E95218236F700C0A45E /* APIKeys.swift */; };
+		9EB78E9A218388B800C0A45E /* LocationSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78E99218388B800C0A45E /* LocationSelectorViewController.swift */; };
+		9EB78EA021838FD300C0A45E /* Weather Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78E9F21838FD300C0A45E /* Weather Data.swift */; };
+		9EB78EA221838FE400C0A45E /* Geocoding Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78EA121838FE400C0A45E /* Geocoding Data.swift */; };
 		9EFB41D92180FE820061F41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41D82180FE820061F41A /* AppDelegate.swift */; };
-		9EFB41DB2180FE820061F41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41DA2180FE820061F41A /* ViewController.swift */; };
+		9EFB41DB2180FE820061F41A /* WeatherDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41DA2180FE820061F41A /* WeatherDisplayViewController.swift */; };
 		9EFB41DE2180FE820061F41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB41DC2180FE820061F41A /* Main.storyboard */; };
 		9EFB41E02180FE840061F41A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB41DF2180FE840061F41A /* Assets.xcassets */; };
 		9EFB41E32180FE840061F41A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB41E12180FE840061F41A /* LaunchScreen.storyboard */; };
@@ -20,9 +23,12 @@
 		73C60AB0268A14C5AADECAD0 /* Pods_Dark_Skies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dark_Skies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B00390E9CE5DFCC7B8879C6 /* Pods-Dark Skies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dark Skies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dark Skies/Pods-Dark Skies.debug.xcconfig"; sourceTree = "<group>"; };
 		9EB78E95218236F700C0A45E /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		9EB78E99218388B800C0A45E /* LocationSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectorViewController.swift; sourceTree = "<group>"; };
+		9EB78E9F21838FD300C0A45E /* Weather Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather Data.swift"; sourceTree = "<group>"; };
+		9EB78EA121838FE400C0A45E /* Geocoding Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Geocoding Data.swift"; sourceTree = "<group>"; };
 		9EFB41D52180FE820061F41A /* Dark Skies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Skies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFB41D82180FE820061F41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EFB41DA2180FE820061F41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9EFB41DA2180FE820061F41A /* WeatherDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayViewController.swift; sourceTree = "<group>"; };
 		9EFB41DD2180FE820061F41A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EFB41DF2180FE840061F41A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EFB41E22180FE840061F41A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +48,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EB78E9B21838EFC00C0A45E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EFB41DA2180FE820061F41A /* WeatherDisplayViewController.swift */,
+				9EB78E99218388B800C0A45E /* LocationSelectorViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9EB78E9C21838F3300C0A45E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9EB78E95218236F700C0A45E /* APIKeys.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9EB78E9D21838F5E00C0A45E /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EB78E9F21838FD300C0A45E /* Weather Data.swift */,
+				9EB78EA121838FE400C0A45E /* Geocoding Data.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		9EB78E9E21838F7300C0A45E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9EFB41DC2180FE820061F41A /* Main.storyboard */,
+				9EFB41E12180FE840061F41A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		9EFB41CC2180FE820061F41A = {
 			isa = PBXGroup;
 			children = (
@@ -63,13 +104,13 @@
 		9EFB41D72180FE820061F41A /* Dark Skies */ = {
 			isa = PBXGroup;
 			children = (
-				9EFB41D82180FE820061F41A /* AppDelegate.swift */,
-				9EFB41DA2180FE820061F41A /* ViewController.swift */,
-				9EFB41DC2180FE820061F41A /* Main.storyboard */,
+				9EB78E9E21838F7300C0A45E /* Storyboards */,
+				9EB78E9D21838F5E00C0A45E /* Data Models */,
+				9EB78E9C21838F3300C0A45E /* Utilities */,
+				9EB78E9B21838EFC00C0A45E /* View Controllers */,
 				9EFB41DF2180FE840061F41A /* Assets.xcassets */,
-				9EFB41E12180FE840061F41A /* LaunchScreen.storyboard */,
 				9EFB41E42180FE840061F41A /* Info.plist */,
-				9EB78E95218236F700C0A45E /* APIKeys.swift */,
+				9EFB41D82180FE820061F41A /* AppDelegate.swift */,
 			);
 			path = "Dark Skies";
 			sourceTree = "<group>";
@@ -205,8 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB78EA021838FD300C0A45E /* Weather Data.swift in Sources */,
+				9EB78E9A218388B800C0A45E /* LocationSelectorViewController.swift in Sources */,
 				9EB78E96218236F700C0A45E /* APIKeys.swift in Sources */,
-				9EFB41DB2180FE820061F41A /* ViewController.swift in Sources */,
+				9EFB41DB2180FE820061F41A /* WeatherDisplayViewController.swift in Sources */,
+				9EB78EA221838FE400C0A45E /* Geocoding Data.swift in Sources */,
 				9EFB41D92180FE820061F41A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

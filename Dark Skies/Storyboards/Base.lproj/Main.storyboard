@@ -12,14 +12,16 @@
         <!--Tempest-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dark_Skies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherDisplayViewController" customModule="Dark_Skies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glasgow, Kentucky" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIC-kk-0Gc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glasgow, Kentucky" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIC-kk-0Gc">
                                 <rect key="frame" x="16" y="136" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2Th-cK-nHU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,10 +78,13 @@
                         <constraints>
                             <constraint firstItem="KcG-DU-vCn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3jO-9S-dos"/>
                             <constraint firstItem="DA5-YW-dBZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4bn-p1-gLm"/>
+                            <constraint firstItem="KIC-kk-0Gc" firstAttribute="trailing" secondItem="DA5-YW-dBZ" secondAttribute="trailing" id="E7Z-9n-82L"/>
+                            <constraint firstItem="KIC-kk-0Gc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UtZ-zh-cY7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DA5-YW-dBZ" secondAttribute="trailing" constant="16" id="V8W-X1-xJe"/>
                             <constraint firstItem="DA5-YW-dBZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lUb-3r-2rV"/>
                             <constraint firstItem="DA5-YW-dBZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uVE-lF-2XG"/>
                             <constraint firstItem="KcG-DU-vCn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wg3-BM-YVx"/>
+                            <constraint firstItem="KIC-kk-0Gc" firstAttribute="leading" secondItem="DA5-YW-dBZ" secondAttribute="leading" id="ywK-VS-PvG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -95,6 +100,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="currentTempLabel" destination="Em3-Jx-lru" id="VFw-9H-I1B"/>
+                        <outlet property="highTempLabel" destination="yen-yG-bXx" id="6LJ-G8-fA0"/>
+                        <outlet property="iconLabel" destination="KXk-HD-e36" id="eFH-FJ-qV4"/>
+                        <outlet property="locationLabel" destination="KIC-kk-0Gc" id="xgh-0f-jyY"/>
+                        <outlet property="lowTempLabel" destination="hWs-XQ-uDm" id="S99-MK-TVA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +115,7 @@
         <!--Change Location-->
         <scene sceneID="gZi-pE-rO6">
             <objects>
-                <viewController title="Change Location" id="oy5-GK-DA1" sceneMemberID="viewController">
+                <viewController title="Change Location" id="oy5-GK-DA1" customClass="LocationSelectorViewController" customModule="Dark_Skies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zAv-hH-nGx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,6 +133,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xme-vr-oBI"/>
                     </view>
+                    <connections>
+                        <outlet property="locationSearchBar" destination="HNy-Np-2hC" id="sF3-rX-oj1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1p0-W1-4Pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
