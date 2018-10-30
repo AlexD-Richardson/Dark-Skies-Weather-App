@@ -85,22 +85,22 @@ class WeatherData {
     
     //MARK:- Properties
     
-    let tempature: Double
+    let temperature: Double
     
-    let highTempature: Double
+    let highTemperature: Double
     
-    let lowTempature: Double
+    let lowTemperature: Double
     
     let condition: Condition
     //MARK:- Methods
     
-    init(tempature: Double, highTempature: Double, lowTempature: Double, condition: Condition ) {
+    init(temperature: Double, highTemperature: Double, lowTemperature: Double, condition: Condition ) {
         
-        self.tempature = tempature
+        self.temperature = temperature
         
-        self.highTempature = tempature
+        self.highTemperature = highTemperature
         
-        self.lowTempature = tempature
+        self.lowTemperature = lowTemperature
         
         self.condition = condition
         
@@ -137,7 +137,7 @@ class WeatherData {
             
         }
         
-        self.init(tempature: temperature, highTempature: highTemperature, lowTempature: lowTemperature, condition: condition)
+        self.init(temperature: temperature, highTemperature: highTemperature, lowTemperature: lowTemperature, condition: condition)
         
     }
     

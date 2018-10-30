@@ -12,6 +12,7 @@
 		9EB78E9A218388B800C0A45E /* LocationSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78E99218388B800C0A45E /* LocationSelectorViewController.swift */; };
 		9EB78EA021838FD300C0A45E /* Weather Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78E9F21838FD300C0A45E /* Weather Data.swift */; };
 		9EB78EA221838FE400C0A45E /* Geocoding Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78EA121838FE400C0A45E /* Geocoding Data.swift */; };
+		9EB78EA42188919700C0A45E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB78EA32188919700C0A45E /* APIManager.swift */; };
 		9EFB41D92180FE820061F41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41D82180FE820061F41A /* AppDelegate.swift */; };
 		9EFB41DB2180FE820061F41A /* WeatherDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFB41DA2180FE820061F41A /* WeatherDisplayViewController.swift */; };
 		9EFB41DE2180FE820061F41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB41DC2180FE820061F41A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		9EB78E99218388B800C0A45E /* LocationSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectorViewController.swift; sourceTree = "<group>"; };
 		9EB78E9F21838FD300C0A45E /* Weather Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather Data.swift"; sourceTree = "<group>"; };
 		9EB78EA121838FE400C0A45E /* Geocoding Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Geocoding Data.swift"; sourceTree = "<group>"; };
+		9EB78EA32188919700C0A45E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9EFB41D52180FE820061F41A /* Dark Skies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dark Skies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFB41D82180FE820061F41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EFB41DA2180FE820061F41A /* WeatherDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				9EFB41DF2180FE840061F41A /* Assets.xcassets */,
 				9EFB41E42180FE840061F41A /* Info.plist */,
 				9EFB41D82180FE820061F41A /* AppDelegate.swift */,
+				9EB78EA32188919700C0A45E /* APIManager.swift */,
 			);
 			path = "Dark Skies";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				9EFB41DB2180FE820061F41A /* WeatherDisplayViewController.swift in Sources */,
 				9EB78EA221838FE400C0A45E /* Geocoding Data.swift in Sources */,
 				9EFB41D92180FE820061F41A /* AppDelegate.swift in Sources */,
+				9EB78EA42188919700C0A45E /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

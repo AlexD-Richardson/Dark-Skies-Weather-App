@@ -22,73 +22,47 @@ class WeatherDisplayViewController: UIViewController {
     
     @IBOutlet weak var highTempLabel: UILabel!
     
+    var displayWeatherData: WeatherData! {
+        
+        didSet {
+            
+            iconLabel.text = displayWeatherData.condition.icon
+            
+            currentTempLabel.text = "\(displayWeatherData.temperature)º"
+            
+            highTempLabel.text = "\(displayWeatherData.highTemperature)º"
+            
+            lowTempLabel.text = "\(displayWeatherData.lowTemperature)º"
+            
+        }
+        
+    }
+    
+    var displayGeocodingData: GeocodingData! {
+        
+        didSet {
+            
+            locationLabel.text = displayGeocodingData.formattedAddress
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let weatherData = WeatherData(tempature: 50.0, highTempature: 70.0, lowTempature: 32.0, condition: .fog)
-        
+    
         setupDefaultUI()
         
         
-        let apikeys = APIKeys()
-        
-        let darkSkyURL = "https://api.darksky.net/forecast/"
-        
-        let darkSkyKey = apikeys.darkSkyKey
-        
-        let latitude = "37.8267"
-        
-        let longitude = "-122.4233"
-        
-        let url = darkSkyURL + darkSkyKey + "/" + latitude + "," + longitude
-        
-        let request = Alamofire.request(url)
-        
-        request.responseJSON { response in
-            switch response.result {
-                
-            case .success(let value):
-                
-                let json = JSON(value)
-                
-                print(json)
-                
-            case .failure(let error): print(error.localizedDescription)
-                
-            }
-        }
-        
-        let googleBaseURL = "https://maps.googleapis.com/maps/api/geocode/json?address="
-        
-        let googleRequestURL = googleBaseURL + "Glasgow,+Kentucky" + "&key=" + apikeys.googleKey
-        
-        let googleRequest = Alamofire.request(googleRequestURL)
-        
-        googleRequest.responseJSON { response in
-            
-            switch response.result {
-                
-            case .success(let value):
-                
-                let json = JSON(value)
-                
-                print(json)
-                
-            case .failure(let error):
-                
-                print(error.localizedDescription)
-                
-            }
-            
-        }
-        // Do any additional setup after loading the view, typically from a nib.
     }
+        
+        
     
     func setupDefaultUI() {
         
         locationLabel.text = ""
         
-        iconLabel.text = "❄️"
+        iconLabel.text = "🌎"
         
         currentTempLabel.text = "Enter a Location!"
         
@@ -100,6 +74,9 @@ class WeatherDisplayViewController: UIViewController {
         
     }
 
-
+    
+    @IBAction func unwindToWeatherDisplay(segue: UIStoryboardSegue) { }
+    
+    
 }
 
